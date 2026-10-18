@@ -6,7 +6,8 @@ Kırıntı topla, duvarlarda ve tavanda yürü, mobilyaların altına saklan —
 ## Oyna
 
 - 🌐 **Tarayıcıda oyna (PC, iPhone, Android):** https://musa-ok.github.io/ucuyor-bu/
-  - Telefonda yan çevir. İlk açılış ~45 MB indirir, sonra önbellekten açılır.
+  - Telefonda "Dokun ve oyna"ya bas ve yan çevir (iPhone'da ekran dönmüyorsa Denetim Merkezi'nden dikey yön kilidini kapat).
+  - İlk açılış ~50 MB indirir, sonra önbellekten açılır.
 - 🤖 **Android APK:** https://github.com/musa-ok/ucuyor-bu/releases/latest/download/UcuyorBu.apk
   - İndirdikten sonra "Bilinmeyen kaynaklardan yüklemeye izin ver" demen gerekebilir.
 
@@ -23,4 +24,4 @@ Kırıntı topla, duvarlarda ve tavanda yürü, mobilyaların altına saklan —
 20 bölüm, 6 hikaye bölümü + final. Parlayan fare deliğine yakalanmadan gir!
 
 ---
-Varlıklar: Kenney Furniture Kit (CC0), Microsoft Rocketbox (MIT), Poly Haven (CC0), Inter yazı tipi (SIL OFL 1.1). Sesler ve müzik koddan sentezlendi.
+Varlıklar: Kenney Furniture Kit (CC0), Microsoft Rocketbox (MIT), Poly Haven (CC0), Inter yazı tipi (SIL OFL 1.1), seslendirme Piper TTS + DFKI Türkçe sesi (CC BY-NC-SA 4.0, ticari olmayan). Efektler ve müzik koddan sentezlendi. Ayrıntı: THIRD_PARTY_NOTICES.md

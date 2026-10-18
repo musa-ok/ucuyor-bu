@@ -146,12 +146,33 @@
       document.body.appendChild(script);
 
     </script>
-  <div id="rotate-hint">📱↻<br>Telefonu yan çevir</div>
+  <div id="play-overlay"><div class="big">UÇUYOR BU!</div><div>Dokun ve oyna</div><small>Telefonu yan çevir</small></div>
+    <div id="rotate-hint">📱 ↻<br>Telefonu yan çevir<br><small>Ekran dönmüyorsa: Denetim Merkezi'nden<br>"Dikey Yön Kilidi"ni kapat</small></div>
     <style>
       html, body { margin: 0; height: 100%; overflow: hidden; background: #2b1a10; }
-      #rotate-hint { display: none; position: fixed; inset: 0; z-index: 10; background: #2b1a10; color: #ffd24a;
-        font: bold 28px sans-serif; text-align: center; padding-top: 40vh; }
-      @media (orientation: portrait) and (max-width: 900px) { #rotate-hint { display: block; } }
+      #rotate-hint, #play-overlay { display: none; position: fixed; inset: 0; z-index: 10; background: #2b1a10; color: #ffd24a;
+        font: bold 26px sans-serif; text-align: center; padding-top: 32vh; }
+      #rotate-hint small, #play-overlay small { display: block; margin-top: 14px; font-size: 15px; color: #f3e3c8; font-weight: normal; }
+      #play-overlay .big { font-size: 46px; margin-bottom: 12px; }
+      .is-mobile #play-overlay.show { display: block; }
+      @media (orientation: portrait) and (max-width: 900px) { #rotate-hint { display: block; z-index: 11; } }
     </style>
+    <script>
+      (function () {
+        if (!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return;
+        document.documentElement.classList.add('is-mobile');
+        var overlay = document.getElementById('play-overlay');
+        overlay.classList.add('show');
+        function goFull() {
+          var el = document.documentElement;
+          var req = el.requestFullscreen || el.webkitRequestFullscreen;
+          var p = req ? req.call(el) : null;
+          var lock = function () { if (screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(function () {}); };
+          if (p && p.then) p.then(lock).catch(function () {}); else lock();
+        }
+        overlay.addEventListener('click', function () { goFull(); overlay.classList.remove('show'); });
+        document.addEventListener('fullscreenchange', function () { if (!document.fullscreenElement) overlay.classList.add('show'); });
+      })();
+    </script>
   </body>
 </html>

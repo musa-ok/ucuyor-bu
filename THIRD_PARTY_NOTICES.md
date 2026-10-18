@@ -37,6 +37,13 @@ SOFTWARE.
 Oynanabilir evin bütün mobilya ve eşyaları (mutfak, salon, banyo, çocuk ve yatak odası). Atıf zorunlu değildir.
 Kaynak: https://kenney.nl/assets/furniture-kit — Konum: `Assets/_Project/Art/Kenney/`
 
+## Seslendirme — Piper TTS + DFKI Türkçe sesi (CC BY-NC-SA 4.0)
+Hikaye ve oyun içi replikler `Tools/generate_voices.py` ile üretildi: Piper TTS (MIT, https://github.com/rhasspy/piper)
+ve `tr_TR-dfki-medium` sesi. Ses verisi: DFKI / MaryTTS `dfki-ot-data` (https://github.com/marytts/dfki-ot-data),
+lisans **CC BY-NC-SA 4.0** — ticari olmayan kullanım. Seslerin perdesi/temposu karakterlere göre değiştirilmiştir;
+türetilen ses dosyaları (`Assets/_Project/Resources/Voice/`) aynı lisansla paylaşılır.
+**Oyun satılacaksa bu sesler değiştirilmelidir** (kendi kaydın veya ticari lisanslı bir TTS).
+
 ## Inter yazı tipi — SIL Open Font License 1.1
 Arayüz ve sahne yazıları. Telif: The Inter Project Authors (https://github.com/rsms/inter).
 Lisans metni: `Assets/_Project/Resources/Fonts/Inter-LICENSE.txt`
